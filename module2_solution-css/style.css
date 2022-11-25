@@ -1,0 +1,100 @@
+/** @format */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  margin: 0 auto;
+}
+.header > h1 {
+  margin: 50px;
+  text-align: center;
+}
+
+.row {
+  /* display: flex; */
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 0px auto; */
+  /* justify-content: center; */
+}
+
+section {
+  position: relative;
+  background-color: rgb(95, 94, 94);
+  border: 1px solid black;
+  left: 1.5%;
+
+  /* margin: 0 auto; */
+}
+/* section:nth-child(1) {
+  position: relative;
+  background-color: rgb(95, 94, 94);
+} */
+section:nth-child(2) {
+}
+section > h3 {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 100px;
+  padding: 5px 12px;
+  border: 1px solid black;
+}
+section:nth-child(1) h3 {
+  background-color: aqua;
+}
+section:nth-child(2) h3 {
+  background-color: red;
+  color: white;
+}
+section:nth-child(3) h3 {
+  background-color: beige;
+}
+section > p {
+  width: 90%;
+  padding: 50px 5px;
+}
+
+/* desktop view */
+@media (min-width: 992px) {
+  .col-lg-4 {
+    float: left;
+    width: calc(33.33% - 30px);
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+  .col-lg-4:nth-child(1) {
+    margin-right: 10px;
+    /* margin-left: 4px; */
+  }
+}
+
+/* tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-lg-4:not(.col-lg-4:last-child) {
+    float: left;
+    width: calc(50% - 24px);
+    color: yellow;
+    margin: 3px 3px;
+  }
+  .col-lg-4:last-child {
+    float: left;
+    width: calc(100% - 48px);
+    margin: 10px 10px;
+
+    color: blue;
+  }
+}
+
+/* mobile view */
+@media (max-width: 767px) {
+  .col-md-4 {
+    float: left;
+    width: calc(100% - 36px);
+    margin: 3px 3px;
+  }
+}
